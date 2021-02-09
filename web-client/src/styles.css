@@ -1,0 +1,246 @@
+@font-face {
+  font-family: dusha;
+  src: url("./assets/font/dusha/dusha.ttf") format("truetype"); }
+
+@font-face {
+  font-family: open-sans;
+  src: url("./assets/font/open-sans/OpenSans-Regular.ttf") format("truetype"); }
+
+.body {
+  font-family: 'open-sans';
+  font-size: 14px; }
+
+.principal-body {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  overflow: auto;
+  background-image: url("./assets/img/background_red_big_cup.png");
+  background-size: cover; }
+  .principal-body .margin-zero {
+    margin-left: 0;
+    margin-right: 0; }
+  .principal-body .bet-button {
+    text-decoration: none !important;
+    text-align: center;
+    width: 70%;
+    position: absolute;
+    left: 15%;
+    font-size: 18px; }
+  .principal-body .results-button {
+    text-decoration: none !important;
+    text-align: center;
+    width: 70%;
+    position: absolute;
+    left: 15%;
+    font-size: 18px;
+    margin-top: 80px; }
+  .principal-body .administration-button {
+    text-decoration: none !important;
+    text-align: center;
+    width: 70%;
+    position: absolute;
+    left: 15%;
+    font-size: 18px;
+    margin-top: 160px; }
+
+.bet-body {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  overflow: auto;
+  background-image: url("./assets/img/background_red_big.jpg");
+  background-size: cover; }
+  .bet-body .bet-selector-container {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 65px !important;
+    padding: 10px;
+    background-image: url("./assets/img/background_blue_big.jpg");
+    text-align: center; }
+    .bet-body .bet-selector-container .betting-book-selector {
+      background: white;
+      width: 200px;
+      margin-left: auto;
+      margin-right: auto;
+      height: 30px;
+      text-align-last: center;
+      border-radius: 5px; }
+  .bet-body .extra-bet-selector {
+    background: white;
+    width: 150px;
+    margin-left: auto;
+    margin-right: auto;
+    height: 25px;
+    text-align-last: center;
+    border-radius: 5px; }
+  .bet-body .column-show {
+    display: none; }
+
+.login-body {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  overflow: auto;
+  background-image: url("./assets/img/background_red_small_cup.png");
+  background-size: contain; }
+  .login-body .login-card {
+    max-width: 300px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 100px; }
+    .login-body .login-card .form-item {
+      width: 100%; }
+    .login-body .login-card .login-button {
+      margin-top: 20px;
+      width: 150px;
+      margin-left: auto;
+      margin-right: auto; }
+
+.menu {
+  position: fixed;
+  height: 50px;
+  width: 100%;
+  z-index: 100;
+  background-image: url("./assets/img/background_white.jpeg"); }
+  .menu .logout-button {
+    position: absolute;
+    right: 10px;
+    top: 15px;
+    height: 40px;
+    width: 100px;
+    border-radius: 5px;
+    cursor: pointer;
+    color: #054b91; }
+    .menu .logout-button:hover {
+      color: #1177c1; }
+  .menu .menu-title {
+    color: #054b91 !important;
+    font-size: 26px;
+    position: absolute;
+    left: 50px;
+    top: 5px;
+    font-family: 'dusha';
+    text-decoration: none; }
+    .menu .menu-title:hover {
+      color: #1177c1 !important; }
+
+.blue-button {
+  border: 1px;
+  border-radius: 5px;
+  padding: 5px;
+  cursor: pointer;
+  background: #054b91;
+  color: white !important; }
+  .blue-button:hover {
+    background: #1177c1; }
+
+.menu-container {
+  padding-top: 150px; }
+
+.sep {
+  margin-top: 10px;
+  margin-bottom: 10px; }
+
+.my-card {
+  border-radius: 5px;
+  padding: 20px;
+  background: white; }
+
+.inline {
+  display: inline-block; }
+
+.bet-card {
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 10px;
+  padding-right: 10px;
+  position: relative; }
+  .bet-card ul {
+    list-style: none; }
+  .bet-card .save-button {
+    width: 200px;
+    margin-left: auto;
+    margin-right: auto; }
+  .bet-card .bet-item {
+    display: inline-block;
+    width: 100%; }
+    .bet-card .bet-item label {
+      text-align: center; }
+    .bet-card .bet-item .team-item {
+      display: inline-block;
+      width: 40%; }
+    .bet-card .bet-item .team-item-small {
+      display: none; }
+    .bet-card .bet-item .bet-input {
+      max-width: 20px;
+      margin: 1px;
+      text-align: center;
+      padding-left: 0;
+      padding-right: 0; }
+  .bet-card .doble-bet-container {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 500px; }
+  .bet-card .checked-img {
+    width: 20px;
+    position: absolute;
+    top: 10px;
+    right: 10px; }
+  .bet-card table, .bet-card th, .bet-card td {
+    border: 1px solid black;
+    border-collapse: collapse; }
+  .bet-card table {
+    width: 100%; }
+    .bet-card table tr:nth-child(even) {
+      background-color: #eee; }
+    .bet-card table tr:nth-child(odd) {
+      background-color: #fff; }
+  .bet-card th {
+    cursor: pointer;
+    background-color: #eee; }
+    .bet-card th img {
+      width: 25px; }
+  .bet-card .table-img {
+    width: 15px; }
+
+.center {
+  text-align: center; }
+
+.left {
+  text-align: left; }
+
+.right {
+  text-align: right; }
+
+.small-text {
+  font-size: 10px; }
+
+@media screen and (max-width: 767px) {
+  .login-body {
+    background-image: url("./assets/img/background_red_big.jpg");
+    background-size: cover; }
+  .principal-body {
+    background-image: url("./assets/img/background_red_big.jpg");
+    background-size: cover; }
+  .menu-title-hide {
+    display: none; }
+  .team-item {
+    display: none !important; }
+  .team-item-small {
+    display: inherit !important;
+    width: 35%; }
+    .team-item-small img {
+      display: block;
+      margin-left: auto;
+      margin-right: auto; }
+    .team-item-small label {
+      display: block;
+      margin-left: auto;
+      margin-right: auto; }
+  .column-hidden {
+    display: none; }
+  .column-show {
+    display: block !important; } }

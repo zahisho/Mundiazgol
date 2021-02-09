@@ -1,0 +1,351 @@
+// colors
+$border_color: #8f8d8d;
+$blue_color: #054b91;
+$light_blue_color: #1177c1;
+$red_color: #ca322f;
+
+@font-face {
+    font-family: dusha;
+    src: url("./assets/font/dusha/dusha.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: open-sans;
+    src: url("./assets/font/open-sans/OpenSans-Regular.ttf") format("truetype");
+}
+
+.body {
+    font-family: 'open-sans';
+    font-size: 14px;
+}
+
+.principal-body {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    overflow: auto;
+    background-image: url("./assets/img/background_red_big_cup.png");
+    background-size: cover;
+
+    .margin-zero {
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .bet-button {
+        text-decoration: none !important;
+        text-align: center;
+        width: 70%;
+        position: absolute;
+        left: 15%;
+        font-size: 18px;
+    }
+
+    .results-button {
+        text-decoration: none !important;
+        text-align: center;
+        width: 70%;
+        position: absolute;
+        left: 15%;
+        font-size: 18px;
+        margin-top: 80px;
+    }
+
+    .administration-button {
+        text-decoration: none !important;
+        text-align: center;
+        width: 70%;
+        position: absolute;
+        left: 15%;
+        font-size: 18px;
+        margin-top: 160px;
+    }
+}
+
+.bet-body {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    overflow: auto;
+    background-image: url("./assets/img/background_red_big.jpg");
+    background-size: cover;
+
+    .bet-selector-container {
+        width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 65px !important;
+        padding: 10px;
+        background-image: url("./assets/img/background_blue_big.jpg");
+        text-align: center;
+
+        .betting-book-selector {
+            background: white;
+            width: 200px;
+            margin-left: auto;
+            margin-right: auto;
+            height: 30px;
+            text-align-last: center;
+            border-radius: 5px;
+        }
+    }
+
+    .extra-bet-selector {
+        background: white;
+        width: 150px;
+        margin-left: auto;
+        margin-right: auto;
+        height: 25px;
+        text-align-last: center;
+        border-radius: 5px;
+    }
+
+    .column-show {
+        display: none;
+    }
+}
+
+.login-body {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    overflow: auto;
+    background-image: url("./assets/img/background_red_small_cup.png");
+    background-size: contain;
+
+    .login-card {
+        max-width: 300px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 100px;
+
+        .form-item {
+            width: 100%;
+        }
+
+        .login-button {
+            margin-top: 20px;
+            width: 150px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+}
+
+.menu {
+    position: fixed;
+    height: 50px;
+    width: 100%;
+    z-index: 100;
+    background-image: url("./assets/img/background_white.jpeg");
+
+    .logout-button {
+        position: absolute;
+        right: 10px;
+        top: 15px;
+        height: 40px;
+        width: 100px;
+        border-radius: 5px;
+        cursor: pointer;
+        color: $blue_color;
+
+        &:hover {
+            color: $light_blue_color;
+        }
+    }
+
+    .menu-title {
+        color: $blue_color !important;
+        font-size: 26px;
+        position: absolute;
+        left: 50px;
+        top: 5px;
+        font-family: 'dusha';
+        text-decoration: none;
+
+        &:hover {
+            color: $light_blue_color !important;
+        }
+    }
+}
+
+.blue-button {
+    border: 1px;
+    border-radius: 5px;
+    padding: 5px;
+    cursor: pointer;
+    background: $blue_color;
+    color: white !important;
+
+    &:hover {
+        background: $light_blue_color;
+    }
+}
+
+.menu-container {
+    padding-top: 150px;
+}
+
+.sep {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.my-card {
+    border-radius: 5px;
+    padding: 20px;
+    background: white;
+}
+
+.inline {
+    display: inline-block;
+}
+
+.bet-card {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 10px;
+    padding-right: 10px;
+    position: relative;
+
+    ul {
+        list-style: none;
+    }
+
+    .save-button {
+        width: 200px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .bet-item {
+        display: inline-block;
+        width: 100%;
+
+        label {
+            text-align: center;
+        }
+
+        .team-item {
+            display: inline-block;
+            width: 40%;
+        }
+
+        .team-item-small {
+            display: none;
+        }
+
+        .bet-input {
+            max-width: 20px;
+            margin: 1px;
+            text-align: center;
+            padding-left: 0;
+            padding-right: 0;
+        }
+    }
+
+    .doble-bet-container {
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 500px;
+    }
+
+    .checked-img {
+        width: 20px;
+        position: absolute;
+        top: 10px;
+        right: 10px;
+    }
+
+    table, th, td {
+        border: 1px solid black;
+        border-collapse: collapse;
+    }
+
+    table {
+        width: 100%;
+
+        tr:nth-child(even) {
+            background-color: #eee;
+        }
+
+        tr:nth-child(odd) {
+            background-color: #fff;
+        }
+    }
+
+    th {
+        cursor: pointer;
+        background-color: #eee;
+
+        img {
+            width: 25px;
+        }
+    }
+
+    .table-img {
+        width: 15px;
+    }
+}
+
+.center {
+    text-align: center;
+}
+
+.left {
+    text-align: left;
+}
+
+.right {
+    text-align: right;
+}
+
+.small-text {
+    font-size: 10px;
+}
+
+@media screen and (max-width: 767px) {
+    .login-body {
+        background-image: url("./assets/img/background_red_big.jpg");
+        background-size: cover;
+    }
+
+    .principal-body {
+        background-image: url("./assets/img/background_red_big.jpg");
+        background-size: cover;
+    }
+
+    .menu-title-hide {
+        display: none;
+    }
+
+    .team-item {
+        display: none !important;
+    }
+
+    .team-item-small {
+        display: inherit !important;
+        width: 35%;
+
+        img {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        label {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+
+    .column-hidden {
+        display: none;
+    }
+
+    .column-show {
+        display: block !important;
+    }
+}
