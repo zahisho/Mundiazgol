@@ -4,7 +4,9 @@ parse.serverURL = 'http://localhost:1337/parse';
 
 let fs = require('fs');
 
-fs.readFile('ficture.csv', (error, data) => {
+let baseDir = ''
+
+fs.readFile(baseDir + '/fixture.csv', (error, data) => {
   if (error) {
     console.log(error);
     return error;
@@ -20,7 +22,7 @@ fs.readFile('ficture.csv', (error, data) => {
 
     let phases = values[0];
     let teams = values[1];
-    let lines = data.toString().split('\n');
+    let lines = data.toString().split('\n').slice(1);
     let phase;
     let bettingBook;
     let initDate;

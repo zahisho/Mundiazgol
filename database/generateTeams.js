@@ -6,8 +6,10 @@ let Team = parse.Object.extend('Team');
 
 let fs = require('fs');
 
-fs.readFile('teams', (error, data) => {
-  let lines = data.toString().split('\n');
+let baseDir = ''
+
+fs.readFile(baseDir + '/teams.csv', (error, data) => {
+  let lines = data.toString().split('\n').slice(1);
 
   let promises = [];
 
