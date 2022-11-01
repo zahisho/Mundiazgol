@@ -27,6 +27,7 @@ fs.readFile(baseDir + '/fixture.csv', (error, data) => {
     let bettingBook;
     let initDate;
     let endDate = new Date(2018, 5, 1);
+    let countGroupPhase = 0;
     for (let line of lines) {
       if (line !== '') {
         let sp = line.split(',');
@@ -50,6 +51,12 @@ fs.readFile(baseDir + '/fixture.csv', (error, data) => {
           bettingBook.set('initDate', initDate);
           bettingBook.set('endDate', endDate);
           bettingBook.set('active', true);
+          let name = sp[5];
+          if (sp[5] === 'Fase de grupos') {
+            countGroupPhase++;
+            name += ' ' + countGroupPhase;
+          }
+          bettingBook.set('name', name);
 
           promises.push(bettingBook.save());
         }
