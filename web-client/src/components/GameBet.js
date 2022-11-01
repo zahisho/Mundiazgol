@@ -83,11 +83,11 @@ const GameBet = ({ withScore, bet, index, enabled }) => {
   return (
     <div className='bet-item'>
       <div className='team-item left'>
-        <img src={imagesUrl + teamA.flagImg} alt='bandera' />
+        <img src={imagesUrl + teamA.flagImg} alt='bandera' width='48px' />
         <label>{teamA.name}</label>
       </div>
       <div className='team-item-small left'>
-        <img src={imagesUrl + teamA.flagImg} alt='bandera' />
+        <img src={imagesUrl + teamA.flagImg} alt='bandera' width='48px' />
         <label>{teamA.name}</label>
       </div>
       {contentA}
@@ -95,10 +95,10 @@ const GameBet = ({ withScore, bet, index, enabled }) => {
       {contentB}
       <div className='team-item right'>
         <label>{teamB.name}</label>
-        <img src={imagesUrl + teamB.flagImg} alt='bandera' />
+        <img src={imagesUrl + teamB.flagImg} alt='bandera' width='48px' />
       </div>
       <div className='team-item-small right'>
-        <img src={imagesUrl + teamB.flagImg} alt='bandera' />
+        <img src={imagesUrl + teamB.flagImg} alt='bandera' width='48px' />
         <label>{teamB.name}</label>
       </div>
     </div>
