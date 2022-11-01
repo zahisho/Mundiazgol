@@ -200,7 +200,7 @@ Parse.Cloud.define('getScoreTable', (request, response) => {
  * @param{bettingBookId, userId, valid}
  */
 Parse.Cloud.define('validateBets', (request, response) => {
-  if (request.user.attributes.username === 'miguel') {
+  if (request.user.attributes.admin) {
     return BettingBookService.getBettingBook(request.params.bettingBookId)
       .then((bettingBook) => {
         return GameService.getGamesOfBettingBook(bettingBook)

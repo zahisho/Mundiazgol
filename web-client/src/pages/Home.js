@@ -3,7 +3,7 @@ import Parse from 'parse';
 
 const Home = () => {
   let adminButton;
-  if (Parse.User.current() && Parse.User.current().attributes.username === 'miguel') {
+  if (Parse.User.current() && Parse.User.current().attributes.admin) {
     adminButton = (
       <a className='blue-button administration-button' href='/#/administration'>Administrar cartillas</a>
     );
