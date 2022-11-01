@@ -24,8 +24,7 @@ $red_color: #ca322f;
     width: 100%;
     position: absolute;
     overflow: auto;
-    background-image: url("./assets/img/background_red_big_cup.png");
-    background-size: cover;
+    background: linear-gradient(185.66deg, rgb(28, 1, 17) 5.13%, rgb(63, 7, 29) 49.3%, rgb(93, 13, 40) 87.75%, rgb(138, 21, 56) 145.92%);
 
     .margin-zero {
         margin-left: 0;
@@ -67,8 +66,7 @@ $red_color: #ca322f;
     width: 100%;
     position: absolute;
     overflow: auto;
-    background-image: url("./assets/img/background_red_big.jpg");
-    background-size: cover;
+    background: linear-gradient(185.66deg, rgb(28, 1, 17) 5.13%, rgb(63, 7, 29) 49.3%, rgb(93, 13, 40) 87.75%, rgb(138, 21, 56) 145.92%);
 
     .bet-selector-container {
         width: 80%;
@@ -76,7 +74,7 @@ $red_color: #ca322f;
         margin-right: auto;
         margin-top: 65px !important;
         padding: 10px;
-        background-image: url("./assets/img/background_blue_big.jpg");
+        background-color: #020f2a;
         text-align: center;
 
         .betting-book-selector {
@@ -110,8 +108,7 @@ $red_color: #ca322f;
     width: 100%;
     position: absolute;
     overflow: auto;
-    background-image: url("./assets/img/background_red_small_cup.png");
-    background-size: contain;
+    background: linear-gradient(185.66deg, rgb(28, 1, 17) 5.13%, rgb(63, 7, 29) 49.3%, rgb(93, 13, 40) 87.75%, rgb(138, 21, 56) 145.92%);
 
     .login-card {
         max-width: 300px;
@@ -137,7 +134,7 @@ $red_color: #ca322f;
     height: 50px;
     width: 100%;
     z-index: 100;
-    background-image: url("./assets/img/background_white.jpeg");
+    background-color: rgb(2, 15, 42);
 
     .logout-button {
         position: absolute;
@@ -147,15 +144,15 @@ $red_color: #ca322f;
         width: 100px;
         border-radius: 5px;
         cursor: pointer;
-        color: $blue_color;
+        color: #a5acbb;
 
         &:hover {
-            color: $light_blue_color;
+            color: #fff;
         }
     }
 
     .menu-title {
-        color: $blue_color !important;
+        color: #a5acbb !important;
         font-size: 26px;
         position: absolute;
         left: 50px;
@@ -164,7 +161,7 @@ $red_color: #ca322f;
         text-decoration: none;
 
         &:hover {
-            color: $light_blue_color !important;
+            color: #fff !important;
         }
     }
 }
@@ -174,11 +171,11 @@ $red_color: #ca322f;
     border-radius: 5px;
     padding: 5px;
     cursor: pointer;
-    background: $blue_color;
-    color: white !important;
+    background: rgb(2, 15, 42);
+    color: #a5acbb !important;
 
     &:hover {
-        background: $light_blue_color;
+        color: #fff !important;
     }
 }
 
@@ -222,6 +219,9 @@ $red_color: #ca322f;
     .bet-item {
         display: inline-block;
         width: 100%;
+        background-color: #eeeee4;
+        min-height: 4.5em;
+        padding: 1em;
 
         label {
             text-align: center;
@@ -258,7 +258,9 @@ $red_color: #ca322f;
         right: 10px;
     }
 
-    table, th, td {
+    table,
+    th,
+    td {
         border: 1px solid black;
         border-collapse: collapse;
     }
@@ -306,16 +308,6 @@ $red_color: #ca322f;
 }
 
 @media screen and (max-width: 767px) {
-    .login-body {
-        background-image: url("./assets/img/background_red_big.jpg");
-        background-size: cover;
-    }
-
-    .principal-body {
-        background-image: url("./assets/img/background_red_big.jpg");
-        background-size: cover;
-    }
-
     .menu-title-hide {
         display: none;
     }
