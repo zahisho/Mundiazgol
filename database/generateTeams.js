@@ -28,6 +28,7 @@ fs.readFile(baseDir + '/teams.csv', (error, data) => {
     nTeam.set('GC', 0);
     nTeam.set('DG', 0);
     nTeam.set('Pts', 0);
+    nTeam.set('active', true);
 
     promises.push(nTeam.save());
   }
