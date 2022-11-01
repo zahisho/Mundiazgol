@@ -1,6 +1,22 @@
+let TeamService = require('./TeamService');
 
 module.exports = {
-  generateWinnerBet(user, bettingBook, team) {
+  async generateWinnerBet(user, bettingBook, team) {
+    let query = new Parse.Query('WinnerBet');
+
+    query.equalTo('bettingBook', bettingBook);
+    query.equalTo('user', user);
+
+    let winnerBet = await query.first();
+
+    if (winnerBet && winnerBet.get('team')) {
+      return winnerBet;
+    }
+
+    if (team === undefined) {
+      team = (await TeamService.getActiveTeams())[0];
+    }
+
     let wb = new (Parse.Object.extend('WinnerBet'))();
 
     wb.set('user', user);
@@ -16,7 +32,7 @@ module.exports = {
     return winnerBet.save();
   },
 
-  getWinnerBet(bettingBook, user) {
+  async getWinnerBet(bettingBook, user) {
     let query = new Parse.Query('WinnerBet');
 
     query.equalTo('bettingBook', bettingBook);
@@ -24,7 +40,16 @@ module.exports = {
 
     query.include('team');
 
-    return query.first();
+    let winnerBet = await query.first();
+    if (winnerBet === undefined) {
+      winnerBet = await this.generateWinnerBet(user, bettingBook);
+    }
+    if (winnerBet.get('team') === undefined) {
+      let team = await TeamService.getActiveTeams();
+      winnerBet.set('team', team);
+      await winnerBet.save()
+    }
+    return winnerBet;
   },
 
   getWinnerBetById(winnerBetId) {
